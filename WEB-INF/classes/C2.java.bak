@@ -1,0 +1,20 @@
+class C2{
+    public static String salidaHTML(String filas, String columnas){
+        String out="<html><form action='https://nicolasserrano.github.io/CS/HTML/query.html' method='GET'><input type='hidden' name=filas value="+ filas +">";
+        out+="<input type='hidden' name=columnas value="+ columnas +">";
+        out+="<TABLE BORDER=0>";
+        int f = Integer.parseInt(filas);
+        int c = Integer.parseInt(columnas);
+        for (int i=0;i<f; i++){
+			out+="<TR>";
+			for (int j=0; j<c; j++){
+                out+="<TD><input TYPE='checkbox' NAME='celda_ "+i+"' VALUE=1></TD>";
+            }
+            out+="</TR>";
+        }
+        out+="</TABLE>";
+		out+="<input TYPE='SUBMIT'> ";
+		out+="</form></html>";
+        return out;
+    }
+}

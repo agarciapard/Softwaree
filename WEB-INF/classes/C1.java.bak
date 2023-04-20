@@ -1,0 +1,10 @@
+class C1{
+    public static String salidaHTML(String dim){
+        String out="";
+        int dimension = Integer.parseInt(dim);
+        for (int i=1;i<=dimension; i++){
+            out+="<a href=>Crear matriz"+ i +" x "+ i +" </a><br>";
+        }
+        return out;
+    }
+}
